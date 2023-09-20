@@ -414,16 +414,50 @@ La calificación numérica que se introduce por teclado debe estar comprendida e
             }
         }*/
 
-/*28. Programa que lea dos números enteros positivos N y M y muestre los múltiplos de N que hay desde 1 hasta M. Por ejemplo si N = 4 y M = 500 el programa mostrará los múltiplos de 4 desde 1 hasta 500. El valor de N deberá ser menor que el valor de M. Si no se introducen valores válidos para N o M se mostrará el mensaje correspondiente y se vuelven a pedir.
+        /*28. Programa que lea dos números enteros positivos N y M y muestre los múltiplos de N que hay desde 1 hasta M. Por ejemplo si N = 4 y M = 500 el programa mostrará los múltiplos de 4 desde 1 hasta 500. El valor de N deberá ser menor que el valor de M. Si no se introducen valores válidos para N o M se mostrará el mensaje correspondiente y se vuelven a pedir.
 
+        int N, M;
 
+        do {
+            System.out.print("Ingrese un número entero: ");
+            N = leer.nextInt();
+            if (N <= 0) {
+                System.out.println("N debe ser un número entero positivo.");
+            }
+        } while (N <= 0);
 
-29. Programa Java que convierte millas a kilómetros. El programa pide que se introduzca una cantidad de millas y calcula y muestra su equivalente en Kilómetros. El proceso se repite hasta que se introduzca un 0 como valor para las millas.
+        do {
+            System.out.print("Ingrese un número entero: ");
+            M = leer.nextInt();
+            if (M <= N) {
+                System.out.println("M debe ser mayor que N.");
+            }
+        } while (M <= N);
+
+        System.out.println("Los múltiplos de " + N + " desde 1 hasta " + M + " son:");
+        for (int i = 1; i <= M; i++) {
+            if (i % N == 0) {
+                System.out.print(i + " ");
+            }
+        }*/
+
+/*29. Programa Java que convierte millas a kilómetros. El programa pide que se introduzca una cantidad de millas y calcula y muestra su equivalente en Kilómetros. El proceso se repite hasta que se introduzca un 0 como valor para las millas.
 1 Milla equivale a 1.6093 Kilómetros.
 El valor de los KM resultantes se debe mostrar con dos decimales.
 Para pasar de millas a Km realizaremos la operación:
 Km = millas * 1.6093
-}*/
+
+        double millas;
+        double kilometros;
+        do {
+            System.out.print("Introduce la cantidad de millas (0 para salir): ");
+            millas = leer.nextDouble();
+            if (millas != 0) {
+                kilometros = millas * 1.6093;
+                System.out.printf("%.2f millas equivale a %.2f kilómetros%n", millas, kilometros);
+            }
+        } while (millas != 0);
+        System.out.println("¡Hasta luego!");*/
 
     }
 }
